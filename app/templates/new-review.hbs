@@ -1,0 +1,15 @@
+<form>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    {{input value=name id="name"}}
+  </div>
+  <div class="form-group">
+    <label for="text">Write your review of this business:</label>
+    {{input value=text id="text"}}
+  </div>
+  <div class="form-group">
+    <label for="rating">Rate:</label>
+    {{view "select" content=ratings value=rating}}
+  </div>
+  <button class="btn btn-success" {{action 'rate'}}>Submit</button>
+</form>

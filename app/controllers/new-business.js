@@ -7,7 +7,8 @@ export default Ember.Controller.extend({
         name: this.get('name'),
         address: this.get('address'),
         phone: this.get('phone'),
-        description: this.get('description')
+        description: this.get('description'),
+        ratings: []
       });
       newBusiness.save();
       this.setProperties({

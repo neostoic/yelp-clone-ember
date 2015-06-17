@@ -10,3 +10,17 @@
       <p><span class="bold">Phone Number: </span>{{model.phone}}</p>
       <p><span class="bold">Description: </span> {{model.description}}</p>
 </div>
+
+<h4>Reviews:</h4>
+<ul>
+  {{#each review in model.reviews}}
+    <li>
+      <p>Name: {{review.name}}</p>
+      <p>Review: {{review.text}}</p>
+    </li>
+  {{/each}}
+</ul>
+
+{{#link-to 'new-review'}}Add a review{{/link-to}}
+
+{{outlet}}
