@@ -7,10 +7,7 @@
 <ul class="unstyled-list">
   {{#each business in model}}
     <li>
-      <p>Name: {{business.name}}</p>
-      <p>Address: {{business.address}}</p>
-      <p>Phone Number: {{business.phone}}</p>
-      <p>Description: {{business.description}}</p>
+      <p>{{#link-to 'business' business.id}}{{business.name}}{{/link-to}}</p>
     </li>
   {{/each}}
 </ul>
