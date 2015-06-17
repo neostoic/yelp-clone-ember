@@ -6,23 +6,23 @@ export default Ember.Controller.extend({
 
   actions: {
     rate: function() {
+      var business = this.get('controllers.business.model');
       var newReview = this.store.createRecord('review', {
         name: this.get('name'),
-        text: this.get('text')
+        text: this.get('text'),
+        rating: this.get('rating')
       });
-      newReview.save();
-
-      var business = this.get('controllers.business.model');
-      business.get('reviews').pushObject(newReview);
-      var rating = this.get('rating');
-
-      business.get('ratings').pushObject(rating);
-      business.save();
+      newReview.save().then(function() {
+        business.get('reviews').pushObject(newReview);
+        business.save();
+      });
 
       this.setProperties({
         name: '',
         text: ''
       });
+
+      this.transitionToRoute('business', business.get('id'));
     }
   }
 });

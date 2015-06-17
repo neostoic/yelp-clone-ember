@@ -12,12 +12,14 @@
 </div>
 
 <h4>Reviews:</h4>
-<ul>
+Number of reviews: {{model.reviews.length}}
+<ul class="unstyled-list">
   {{#each review in model.reviews}}
     <li>
       <p>Name: {{review.name}}</p>
       <p>Review: {{review.text}}</p>
     </li>
+    <hr class="divider">
   {{/each}}
 </ul>
 
