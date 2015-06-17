@@ -19,7 +19,8 @@ export default Ember.Controller.extend({
 
       this.setProperties({
         name: '',
-        text: ''
+        text: '',
+        rating: 1
       });
 
       this.transitionToRoute('business', business.get('id'));

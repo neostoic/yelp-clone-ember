@@ -3,26 +3,51 @@
 
 <h3>Here is the info on this business:</h3>
 
+{{#if isEditing}}
+  <form>
+    <div class="form-group">
+      <label for="name">Enter in the name of your business:</label>
+      {{input value=model.name id="name"}}
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      {{input value=model.address id="address"}}
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      {{input value=model.phone id="phone"}}
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      {{textarea value=model.description id="description"}}
+    </div>
+    <button class="btn btn-primary" {{action 'save'}}>Submit</button>
+  </form>
 
-<div class="well">
-      <p><span class="bold">Name: </span> {{model.name}}</p>
-      <p><span class="bold">Address: </span> {{model.address}}</p>
-      <p><span class="bold">Phone Number: </span>{{model.phone}}</p>
-      <p><span class="bold">Description: </span> {{model.description}}</p>
-</div>
+{{else}}
+  <div class="well">
+    <p><span class="bold">Name: </span> {{model.name}}</p>
+    <p><span class="bold">Address: </span> {{model.address}}</p>
+    <p><span class="bold">Phone Number: </span>{{model.phone}}</p>
+    <p><span class="bold">Description: </span> {{model.description}}</p>
+  </div>
 
-<h4>Reviews:</h4>
-Number of reviews: {{model.reviews.length}}
-<ul class="unstyled-list">
-  {{#each review in model.reviews}}
-    <li>
-      <p>Name: {{review.name}}</p>
-      <p>Review: {{review.text}}</p>
-    </li>
-    <hr class="divider">
-  {{/each}}
-</ul>
+  <button class="btn btn-primary" {{action 'edit'}}>Edit Business</button>
 
-{{#link-to 'new-review'}}Add a review{{/link-to}}
+  <h4>Reviews:</h4>
+  Number of reviews: {{model.reviews.length}}
+  <ul class="unstyled-list">
+    {{#each review in model.reviews}}
+      <li>
+        <p><span class="bold">Name: </span>{{review.name}}</p>
+        <p><span class="bold">Review: </span>{{review.text}}</p>
+        <p><span class="bold">Rating: </span>{{review.rating}}/5</p>
+      </li>
+      <hr class="divider">
+    {{/each}}
+  </ul>
 
-{{outlet}}
+  {{#link-to 'new-review'}}Add a review{{/link-to}}
+
+  {{outlet}}
+{{/if}}
