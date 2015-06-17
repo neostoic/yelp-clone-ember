@@ -1,0 +1,19 @@
+<form>
+  <div class="form-group">
+    <label for="name">Enter in the name of your business:</label>
+    {{input value=name id="name"}}
+  </div>
+  <div class="form-group">
+    <label for="address">Address:</label>
+    {{input value=address id="address"}}
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone Number:</label>
+    {{input value=phone id="phone"}}
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    {{input value=description id="description"}}
+  </div>
+  <button class="btn btn-primary" {{action 'addBusiness'}}>Submit</button>
+</form>
