@@ -18,12 +18,12 @@ export default Ember.Controller.extend({
     },
     delete: function() {
       var business = this.get('model');
-      var reviews = this.get('reviews'),
-        list = reviews.toArray();
-      list.forEach(function(review){
-        review.destroyRecord();
-        reviews.removeObject(review);
-      });
+      // var reviews = this.get('reviews'),
+      //   list = reviews.toArray();
+      // list.forEach(function(review){
+      //   review.destroyRecord();
+      //   reviews.removeObject(review);
+      // });
       // var reviews = this.get('controllers.review.model');
       business.destroyRecord();
       this.transitionToRoute('businesses');
