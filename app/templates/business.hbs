@@ -33,7 +33,7 @@
   </div>
 
   <button class="btn btn-primary" {{action 'edit'}}>Edit Business</button>
-  <button class="btn btn-primary" {{action 'delete'}}>Delete Business</button>
+  <button class="btn btn-primary" {{action 'delete' model.id}}>Delete Business</button>
 
   <h4>Reviews:</h4>
   Number of reviews: {{model.reviews.length}}
