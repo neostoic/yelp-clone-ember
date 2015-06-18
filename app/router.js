@@ -13,7 +13,6 @@ Router.map(function() {
   this.resource('business', {path: 'businesses/:id'}, function() {
     this.resource('new-review');
   });
-  this.route('reviews');
 });
 
 export default Router;

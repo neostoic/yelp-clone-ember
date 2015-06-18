@@ -45,8 +45,12 @@ ul.nav.navbar-nav.special-color {
   color: white;
   font-weight: bold;
   letter-spacing: .0em;
-
 }
+
+a#ember364.ember-view.active {
+  color: white;
+}
+
 /*.ember-view  .special-color{
   color: #fff;
 
@@ -64,7 +68,7 @@ ul.nav.navbar-nav.special-color {
 
 .business-img {
   float:right;
-  width: 33%;
-  margin-top: -15px;
+  width: 30%;
+  margin-top: -17px;
   border-radius: 3px;
 }

@@ -23,7 +23,7 @@ module.exports = function(environment) {
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'font-src': "'self'",
       'connect-src': "*",
-      'img-src': "'self'",
+      'img-src': "*",
       'style-src': "'self' 'unsafe-inline'",
       'frame-src': "'none'"
     }

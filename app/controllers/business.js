@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
         ids.push(review.get('id'));
       });
 
-      var allReviews = this.store.find('review').then(function(allReviewsCallback) {
+      this.store.find('review').then(function(allReviewsCallback) {
         ids.forEach(function(id){
           allReviewsCallback.forEach(function(aReview){
             if(id === aReview.get('id')) {

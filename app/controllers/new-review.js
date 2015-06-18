@@ -3,8 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   ratings: [1, 2, 3, 4, 5],
   needs: ['business'],
-  needs: ['user'],
-  
+
   actions: {
     rate: function() {
       var business = this.get('controllers.business.model');
