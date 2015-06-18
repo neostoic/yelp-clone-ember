@@ -20,13 +20,13 @@ export default Ember.Controller.extend({
       var business = this.get('model');
       var reviews = business.get('reviews');
 
-      var x = [];
+      var ids = [];
       reviews.forEach(function(review){
-        x.push(review.get('id'));
+        ids.push(review.get('id'));
       });
 
       var allReviews = this.store.find('review').then(function(allReviewsCallback) {
-        x.forEach(function(id){
+        ids.forEach(function(id){
           allReviewsCallback.forEach(function(aReview){
             if(id === aReview.get('id')) {
               aReview.destroyRecord();

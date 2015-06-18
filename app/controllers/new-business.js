@@ -7,15 +7,18 @@ export default Ember.Controller.extend({
         name: this.get('name'),
         address: this.get('address'),
         phone: this.get('phone'),
-        description: this.get('description')
+        description: this.get('description'),
+        image: this.get('image')
       });
       newBusiness.save();
       this.setProperties({
         name: '',
         address: '',
         phone: '',
-        description: ''
+        description: '',
+        image: ''
       });
+      this.transitionToRoute('businesses');
     }
   }
 });

@@ -1,5 +1,5 @@
 body {
-  background-color: #FFF4DF;
+  background-color: #F5f5f1;
 }
 
 ul.unstyled-list li {
@@ -11,7 +11,7 @@ ul.unstyled-list li {
 }
 
 .well {
-  background-color: ;
+  background-color: #fff;
 }
 
 hr.divider {
@@ -21,9 +21,50 @@ hr.divider {
 }
 
 .navbar-default {
-  background-color: red;
+  background-color: #B4282E;
 }
 
-.navbar-brand {
+.navbar-default .navbar-brand {
   color: white;
+}
+
+.logo-img {
+  margin-top: -15px;
+}
+
+ul.nav.navbar-nav.special-color {
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-weight: bold;
+  letter-spacing: .0em;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+  color: white;
+  font-weight: bold;
+  letter-spacing: .0em;
+
+}
+/*.ember-view  .special-color{
+  color: #fff;
+
+}*/
+
+.btn-primary {
+  background-color: #B4282E;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #af0606;
+  border: none;
+}
+
+.business-img {
+  float:right;
+  width: 33%;
+  margin-top: -15px;
+  border-radius: 3px;
 }
